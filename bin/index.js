@@ -6,11 +6,6 @@ const sh = require('shelljs')
 
 program
     .version(pckg.version)
-    .description('PowAuth :: Opinionated Auth Server for Hasura')
-    .option('-s, --setup', 'Setup powauth')
-    .option('-c, --config', 'Set config path')
-    .option('-k, --keys', 'Generate RSA Keys for JWT')
-    .parse(process.argv)
 
 
 program
@@ -23,5 +18,5 @@ program
         sh.cp(`${copyFlags}`, '../config/', `./${path}/`)
         sh.exec(`openssl genrsa -out ${path}/private.pem 2048`)
         sh.exec(`openssl rsa -in ${path}/private.pem -pubout > public.pem`)
-
     })
+program.parse(process.argv)
