@@ -1,6 +1,6 @@
 {
     "name": "powauth",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Powerful authentication server for hasura.",
     "main": "index.js",
     "bin": {
