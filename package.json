@@ -1,0 +1,36 @@
+{
+    "name": "powauth",
+    "version": "0.0.1",
+    "description": "Powerful authentication server for hasura.",
+    "main": "index.js",
+    "bin": {
+        "powauth": "./bin/index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/saas-base/powauth.git"
+    },
+    "keywords": [
+        "powauth",
+        "hasura-auth",
+        "authentication",
+        "password",
+        "login",
+        "hasura"
+    ],
+    "author": "Patrick Curl <patrickwcurl@gmail.com> (https://github.com/patrickcurl)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/saas-base/powauth/issues"
+    },
+    "homepage": "https://github.com/saas-base/powauth#readme",
+    "dependencies": {
+        "commander": "^2.20.0",
+        "fs-extra": "^8.0.1",
+        "openssl-nodejs": "^1.0.5",
+        "shelljs": "^0.8.3"
+    }
+}
