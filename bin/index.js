@@ -13,10 +13,10 @@ program
     .option('-o, --overwrite', 'Overwrite config files.')
     .description('Setup and bootstrap powauth.')
     .action((path, options) => {
-        let path = path || './.pow'
+        let configPath = path || './.pow'
         let copyFlags = options.overwrite ? '-Rf' : '-R'
-        sh.cp(`${copyFlags}`, '../config/', `./${path}/`)
-        sh.exec(`openssl genrsa -out ${path}/private.pem 2048`)
-        sh.exec(`openssl rsa -in ${path}/private.pem -pubout > public.pem`)
+        sh.cp(`${copyFlags}`, '../config/', `./${configPath}/`)
+        sh.exec(`openssl genrsa -out ${configPath}/private.pem 2048`)
+        sh.exec(`openssl rsa -in ${configPath}/private.pem -pubout > public.pem`)
     })
 program.parse(process.argv)
